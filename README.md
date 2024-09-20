@@ -5,8 +5,8 @@ The script will ask you to enter the IP address of your device, and then guide y
 learning each of the commands for your air conditioner or other IR-controlled device.
 
 Its purpose is to automate the creation of a new JSON file for the 
-[smartir Home Assistant integration](https://github.com/smartHomeHub/SmartIR), specifically for
-[climate devices](https://github.com/smartHomeHub/SmartIR/blob/master/docs/CLIMATE.md).
+[smartir Home Assistant integration](https://github.com/litinoveweedle/SmartIR), specifically for
+[climate devices](https://github.com/litinoveweedle/SmartIR/blob/master/docs/CLIMATE.md).
 
 ## Requirements
 
@@ -50,4 +50,4 @@ can then use this file for the `smartir` integration.
 
 * [`python_broadlink` library](https://github.com/mjg59/python-broadlink/)
 * [Home Assistant Broadlink integration](https://www.home-assistant.io/integrations/broadlink/)
-* [smartir Home Assistant integration](https://github.com/smartHomeHub/SmartIR)
+* [smartir Home Assistant integration](https://github.com/litinoveweedle/SmartIR)
