@@ -54,12 +54,12 @@ def learn_commands(operation_mode, fan_mode, swing_mode, temp_range):
         print(f'Waiting for command')
         base64command = learn_command()
         for temp in temp_range:
-            commands[operation_mode][fan_mode][swing_mode][str(temp)] = base64command
+            commands[operation_mode][fan_mode][swing_mode][f'{temp:g}'] = base64command
     else:
         for temp in temp_range:
             print(f'Waiting for command for temperature {temp}')
             base64command = learn_command()
-            commands[operation_mode][fan_mode][swing_mode][str(temp)] = base64command
+            commands[operation_mode][fan_mode][swing_mode][f'{temp:g}'] = base64command
 
 
 def main():
@@ -77,7 +77,8 @@ def main():
 
     min_temperature = data['minTemperature']
     max_temperature = data['maxTemperature']
-    temp_range = list(range(min_temperature, max_temperature + 1))
+    precision = data['precision']
+    temp_range = [x/10 for x in range(min_temperature*10, (max_temperature*10)+int(precision*10), int(precision*10))]
 
     for operation_mode in operation_modes:
         for fan_mode in fan_modes:
